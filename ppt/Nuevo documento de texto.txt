@@ -1,0 +1,3 @@
+C:\xampp\htdocs\carbone
+
+direccion de local host
