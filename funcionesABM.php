@@ -6,33 +6,30 @@ function alta()
 
     if(isset ($_POST['nombre']))
     {
-        array_push($parametros,$_POST['nombre']);
-         
-        if(isset ($_POST['apellido']))
-        {
-            if(isset ($_POST['legajo']))
-            {
-                $nombre = $_POST['nombre'];
-                $apellido = $_POST['apellido'];
-                $legajo = $_POST['legajo'];
-
-
-
-            }else
-            {
-                echo "no esta seteado el legajo";
-            }
-        }else
-        {
-            echo "no esta seteado el apellido";
-        }
-
+        $nombre = $_POST['nombre'];
+        array_push($parametros,$nombre);
     }else
     {
         echo "no esta seteado el nombre";
     }
-
-
+    
+    if(isset ($_POST['apellido']))
+    {
+        $apellido = $_POST['apellido'];
+        array_push($parametros,$apellido);
+    }else
+    {
+        echo "no esta seteado el apellido";
+    }
+    
+    if(isset ($_POST['legajo']))
+    {    
+        $legajo = $_POST['legajo'];
+        array_push($parametros,$legajo);
+    }else
+    {
+        echo "no esta seteado el legajo";
+    }
 }
 
 function baja()
